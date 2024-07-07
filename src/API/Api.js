@@ -1,0 +1,30 @@
+import axios from "axios";
+
+const instance = axios.create({
+    withCredentials : false,
+    baseURL : "https://potterapi-fedeperin.vercel.app/en/books",
+    // headers:{
+    //     "API-KEY" : "d90f918de6c71ba6c8a150491b180191"
+    // }
+})
+
+export const boredAPi = {
+    async book(){
+        try{
+        const  response =  await instance.get()
+        return response.data
+        }
+        catch(error){
+            console.log("error", error)
+        }
+        // .then(response =>{
+        //     return response.data;
+        // })
+    },
+
+    // properties(work){
+    //     return instance.get(`?${work}`)
+    // }
+
+}
+boredAPi.book().then(title => console.log(title));

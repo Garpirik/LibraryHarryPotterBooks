@@ -1,0 +1,5 @@
+.titleGridBlock{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin:  0 10% 0 20%;
+}

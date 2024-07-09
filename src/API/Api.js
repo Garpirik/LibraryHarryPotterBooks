@@ -21,10 +21,22 @@ export const boredAPi = {
         //     return response.data;
         // })
     },
-
+    async getBook(id){
+        try{
+            const  response = await instance.get()
+            return response.data[id]
+        }
+        catch(error){
+            console.log("error",error)
+        }
+    },
     // properties(work){
     //     return instance.get(`?${work}`)
     // }
 
 }
 boredAPi.book().then(title => console.log(title));
+// boredAPi.getBook().then(index => index.forEach(el=>{
+//     console.log("Hello, index",  index[el.index])
+// }));
+boredAPi.getBook(2).then(index => console.log("With id" , index))

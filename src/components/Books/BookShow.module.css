@@ -3,3 +3,7 @@
     grid-template-columns: repeat(3, 1fr);
     margin:  0 10% 0 20%;
 }
+a{
+    text-decoration: none;
+    color: black;
+}
